@@ -19,7 +19,7 @@ node ('worker_node2') {
    } 
  
 	stage ('Verify') { 
-		def verifyCall = load("/root/repos/libary/src/verify.groovy") 
+		def verifyCall = load("/root/repos/library/src/verify.groovy") 
         verifyCall("Please Verify the build") 
     } 
 } 
