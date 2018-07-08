@@ -18,4 +18,8 @@ node ('worker_node2') {
         gbuild this, 'clean build' 
    } 
  
+	stage ('Verify') { 
+		def verifyCall = load("/root/repos/libary/src/verify.groovy") 
+        verifyCall("Please Verify the build") 
+    } 
 } 
