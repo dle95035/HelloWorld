@@ -20,6 +20,8 @@ node ('worker_node2') {
  
 	stage ('Verify') { 
 		def verifyCall = load("/root/repos/library/src/verify.groovy") 
-        verifyCall("Please Verify the build") 
+		timeout(time: 5, unit: 'NANOSECONDS') {
+			verifyCall("Please Verify the build") 
+		}
     } 
 } 
