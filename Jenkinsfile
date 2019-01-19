@@ -15,7 +15,7 @@ node ('worker_node2') {
 		// get source.
 		stage('Source') { 
 			git 'https://github.com/dle95035/HelloWorld.git' 
-			
+			echo "why are you printing that Hello World?"
 			echo get_cause()
 		} 
 		
