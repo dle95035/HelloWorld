@@ -2,6 +2,10 @@
 @Library('Utilities@master')  
 import static org.conf.Utilities.* 
 
+def get_cause() {
+    currentBuild.getBuildCauses().toString()
+}
+
 node ('worker_node2') { 
     
     def gradleHome
@@ -11,6 +15,8 @@ node ('worker_node2') {
 		// get source.
 		stage('Source') { 
 			git 'https://github.com/dle95035/HelloWorld.git' 
+			
+			echo get_cause()
 		} 
 		
 		// use gbuild from global shared library. 
