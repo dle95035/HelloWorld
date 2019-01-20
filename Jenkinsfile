@@ -7,6 +7,6 @@ def get_cause() {
 }
 
 node {
-	echo get_cause()
+	echo get_cause()[0]
 	echo "Hello world"
 }
